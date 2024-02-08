@@ -9,13 +9,13 @@ This is an authentication system that can be used for any web application. Using
 ----
 Creates and returns a new user
 
-* **URL**
+* **URL** <br />
 /Users
 
-* **Method**
+* **Method** <br />
 POST
 
-* **URL Params**
+* **URL Params** <br />
 None
 
 * **Data Params**
@@ -55,13 +55,13 @@ curl --location 'http://127.0.0.1:5000/Users' \
 ----
 Validates and creates a JWT token that can be used for protected api calls
 
-* **URL**
+* **URL** <br />
 /login
 
-* **Method**
+* **Method** <br />
 POST
 
-* **URL Params**
+* **URL Params** <br />
 None
 
 * **Data Params**
