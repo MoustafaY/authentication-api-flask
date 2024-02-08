@@ -171,3 +171,36 @@ curl --location --request PUT 'http://127.0.0.1:5000/User' \
     "name": "Lily"
 }'
 ```
+
+**Delete user**
+----
+A user deletes their account
+
+* **URL** <br />
+/User
+
+* **Method** <br />
+DELETE
+
+* **URL Params** <br />
+**Required:** `email=[email address of user]`
+
+* **Data Params** <br />
+None
+
+* **Success Response** <br />
+**Code:** 200 <br />
+**Content:** `{'message': 'User deleted'}`
+
+* **Error Response**
+  * **Code:** 400 <br />
+  **Content:** `{"message": "Invalid input"}` <br />
+  OR
+  * **Code:** 404 <br />
+  **Content:** `{"message": "User was not found"}`
+    
+* **Sample Call:** <br />
+```json
+curl --location --request DELETE 'http://127.0.0.1:5000/User?email=joe%40gmail.com' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzM5NjU1NSwianRpIjoiMTE5ZDc4OTktMDE2My00YzE2LWFhMmItNjg5ZjdlNGIyOGU1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImVtYWlsQGdtYWlsLmNvbSIsIm5iZiI6MTcwNzM5NjU1NSwiY3NyZiI6ImJkOGEwZDIyLTNmZDMtNDM0ZC05Y2Y1LTRjMmYzY2Y3Zjg4NSIsImV4cCI6MTcwNzM5NzQ1NX0.2a0U-uItzNHJ7KUOQg1DlM8Zyz3poKEsaHm4BIR0ZfI'
+```
