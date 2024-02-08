@@ -19,7 +19,7 @@ POST
 None
 
 * **Data Params** <br />
-**Required:**
+**Required:** <br />
 ```json
 {
   "name": "Moustafa",
@@ -201,6 +201,57 @@ None
     
 * **Sample Call:** <br />
 ```json
-curl --location --request DELETE 'http://127.0.0.1:5000/User?email=joe%40gmail.com' \
+curl --location --request DELETE 'http://127.0.0.1:5000/User?email=email%40gmail.com' \
 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzM5NjU1NSwianRpIjoiMTE5ZDc4OTktMDE2My00YzE2LWFhMmItNjg5ZjdlNGIyOGU1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImVtYWlsQGdtYWlsLmNvbSIsIm5iZiI6MTcwNzM5NjU1NSwiY3NyZiI6ImJkOGEwZDIyLTNmZDMtNDM0ZC05Y2Y1LTRjMmYzY2Y3Zjg4NSIsImV4cCI6MTcwNzM5NzQ1NX0.2a0U-uItzNHJ7KUOQg1DlM8Zyz3poKEsaHm4BIR0ZfI'
+```
+
+
+**Get all users**
+----
+A call used for development purpose only, returns all the users in the database
+
+* **URL** <br />
+/Users
+
+* **Method** <br />
+GET
+
+* **URL Params** <br />
+None
+
+* **Data Params** <br />
+None
+
+* **Success Response** <br />
+**Code:** 200 <br />
+**Content:** `[{all users}]`
+    
+* **Sample Call:** <br />
+```json
+curl --location 'http://127.0.0.1:5000/Users'
+```
+
+**Delete all users**
+----
+A call used for development purpose only, deletes all the users in the database
+
+* **URL** <br />
+/Users
+
+* **Method** <br />
+DELETE
+
+* **URL Params** <br />
+None
+
+* **Data Params** <br />
+None
+
+* **Success Response** <br />
+**Code:** 200 <br />
+**Content:** `{'message': 'Table reset'}`
+    
+* **Sample Call:** <br />
+```json
+curl --location --request DELETE 'http://127.0.0.1:5000/Users'
 ```
