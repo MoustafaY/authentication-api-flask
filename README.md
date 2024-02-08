@@ -6,7 +6,7 @@ This is an authentication system that can be used for any web application. Using
 ## API Calls
 
 ### Create a user
-----
+
 Creates and returns a new user
 
 * **URL** <br />
@@ -52,7 +52,7 @@ curl --location 'http://127.0.0.1:5000/Users' \
 
 
 ### Login as a user
-----
+
 Validates and creates a JWT token that can be used for protected api calls
 
 * **URL** <br />
@@ -96,7 +96,7 @@ curl --location 'http://127.0.0.1:5000/login' \
 
 
 ### Look up user information
-----
+
 A user looks up their information
 
 * **URL** <br />
@@ -130,7 +130,7 @@ curl --location 'http://127.0.0.1:5000/User?email=email%40gmail.com' \
 
 
 ### Change user information
-----
+
 A user changes their information
 
 * **URL** <br />
@@ -174,7 +174,7 @@ curl --location --request PUT 'http://127.0.0.1:5000/User' \
 
 
 ### Delete user
-----
+
 A user deletes their account
 
 * **URL** <br />
@@ -208,7 +208,7 @@ curl --location --request DELETE 'http://127.0.0.1:5000/User?email=email%40gmail
 
 
 ### Get all users
-----
+
 A call used for development purpose only, returns all the users in the database
 
 * **URL** <br />
@@ -234,7 +234,7 @@ curl --location 'http://127.0.0.1:5000/Users'
 
 
 ### Delete all users
-----
+
 A call used for development purpose only, deletes all the users in the database
 
 * **URL** <br />
