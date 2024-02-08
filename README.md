@@ -18,8 +18,8 @@ POST
 * **URL Params** <br />
 None
 
-* **Data Params**
-**Required**
+* **Data Params** <br />
+**Required:**
 ```json
 {
   "name": "Moustafa",
@@ -28,11 +28,11 @@ None
 }
 ```
 
-* **Success Response**
+* **Success Response** <br />
 **Code:** 200 <br />
 **Content:** `{"email": "email@gmail.com", "name": "Moustafa", "password": "$2b$12$ZD6hvWZKKWhkGfRu0p3Pq.Jq.Ttq1Ql.0L4t3EUvEi5nvrKmcL3AW"}`
 
-* **Error Response**
+* **Error Response** <br />
   * **Code:** 400 <br />
   **Content:** `{"message": "Invalid input"}` <br />
   OR
@@ -64,8 +64,8 @@ POST
 * **URL Params** <br />
 None
 
-* **Data Params**
-**Required**
+* **Data Params** <br />
+**Required:** <br />
 ```json
 {
   "email": "email@gmail.com",
@@ -73,7 +73,7 @@ None
 }
 ```
 
-* **Success Response**
+* **Success Response** <br />
 **Code:** 200 <br />
 **Content:** `{'message': f"Hello {name}, you are logged in!", 'token': {access_token}}`
 
