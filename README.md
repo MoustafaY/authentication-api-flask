@@ -29,12 +29,12 @@ None
 ```
 
 * **Success Response**
-**Code:** 200
+**Code:** 200 <br />
 **Content:** `{"email": "email@gmail.com", "name": "Moustafa", "password": "$2b$12$ZD6hvWZKKWhkGfRu0p3Pq.Jq.Ttq1Ql.0L4t3EUvEi5nvrKmcL3AW"}`
 
 * **Error Response**
   * **Code:** 400 <br />
-  **Content:** `{"message": "Invalid input"}`
+  **Content:** `{"message": "Invalid input"}` <br />
   OR
   * **Code:** 401 <br />
   **Content:** `{"message": "Email already exists"}`
