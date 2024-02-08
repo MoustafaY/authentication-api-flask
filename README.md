@@ -3,9 +3,9 @@
 ## Objective
 This is an authentication system that can be used for any web application. Using flask and sqlalchemy, the objective of this project is to authenticate a user when attempting to log in. There are other functionalities to the project that are needed to achieve this objective, such as creating a user, editing the user's name or deleting the user's account. This project uses sqlite for its database, there is only one model which represents the user, each user has a name, email, and a password. Upon creating a new user, using bycrypt, the password is encrypted before it is stored in the database.
 
-### API Calls
+## API Calls
 
-**Create a user**
+###Create a user
 ----
 Creates and returns a new user
 
@@ -51,7 +51,7 @@ curl --location 'http://127.0.0.1:5000/Users' \
 ```
 
 
-**Login as a user**
+###Login as a user
 ----
 Validates and creates a JWT token that can be used for protected api calls
 
@@ -95,7 +95,7 @@ curl --location 'http://127.0.0.1:5000/login' \
 ```
 
 
-**Look up user information**
+###Look up user information
 ----
 A user looks up their information
 
@@ -129,7 +129,7 @@ curl --location 'http://127.0.0.1:5000/User?email=email%40gmail.com' \
 ```
 
 
-**Change user information**
+###Change user information
 ----
 A user changes their information
 
@@ -172,7 +172,8 @@ curl --location --request PUT 'http://127.0.0.1:5000/User' \
 }'
 ```
 
-**Delete user**
+
+###Delete user
 ----
 A user deletes their account
 
@@ -206,7 +207,7 @@ curl --location --request DELETE 'http://127.0.0.1:5000/User?email=email%40gmail
 ```
 
 
-**Get all users**
+###Get all users
 ----
 A call used for development purpose only, returns all the users in the database
 
@@ -231,7 +232,8 @@ None
 curl --location 'http://127.0.0.1:5000/Users'
 ```
 
-**Delete all users**
+
+###Delete all users
 ----
 A call used for development purpose only, deletes all the users in the database
 
