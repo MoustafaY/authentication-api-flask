@@ -93,3 +93,36 @@ curl --location 'http://127.0.0.1:5000/login' \
     "password": "pass"
 }'
 ```
+
+**Look up user information**
+----
+A user looks up their information
+
+* **URL** <br />
+/User
+
+* **Method** <br />
+GET
+
+* **URL Params** <br />
+**Required:** `email=[email address of user]`
+
+* **Data Params** <br />
+None
+
+* **Success Response** <br />
+**Code:** 200 <br />
+**Content:** `{"email": "email@gmail.com", "name": "Moustafa", "password": "$2b$12$l.B3Yag.9VB4udQQaQsISeY0dXeboKK5KHWjaLoFq.L9uCMWfxY3a"}`
+
+* **Error Response**
+  * **Code:** 400 <br />
+  **Content:** `{"message": "Invalid input"}` <br />
+  OR
+  * **Code:** 404 <br />
+  **Content:** `{"message": "User was not found"}`
+    
+* **Sample Call:** <br />
+```json
+curl --location 'http://127.0.0.1:5000/User?email=email%40gmail.com' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzM5NTU5NCwianRpIjoiYjU2OTQzM2MtOTQ4Zi00YmRiLWIyZGQtMWRlY2Y1NWY4NGU4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImVtYWlsQGdtYWlsLmNvbSIsIm5iZiI6MTcwNzM5NTU5NCwiY3NyZiI6IjFkOWE0OTgxLWExNTQtNDYzZS1iNjAwLTAzNGQyODhmZTMwZSIsImV4cCI6MTcwNzM5NjQ5NH0.ciqqnPV-YqZ-WwZe3IbL9fyhLQB0byuOHux8XMBkowo'
+```
