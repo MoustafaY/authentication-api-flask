@@ -38,12 +38,57 @@ None
   OR
   * **Code:** 401 <br />
   **Content:** `{"message": "Email already exists"}`
+    
 * **Sample Call:** <br />
 ```json
 curl --location 'http://127.0.0.1:5000/Users' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "Moustafa",
+    "email": "email@gmail.com",
+    "password": "pass"
+}'
+```
+
+
+**Login as a user**
+----
+Validates and creates a JWT token that can be used for protected api calls
+
+* **URL**
+/login
+
+* **Method**
+POST
+
+* **URL Params**
+None
+
+* **Data Params**
+**Required**
+```json
+{
+  "email": "email@gmail.com",
+  "password": "pass"
+}
+```
+
+* **Success Response**
+**Code:** 200 <br />
+**Content:** `{'message': f"Hello {name}, you are logged in!", 'token': {access_token}}`
+
+* **Error Response**
+  * **Code:** 400 <br />
+  **Content:** `{"message": "Invalid password"}` or  `{"message": "Invalid input"}` <br />
+  OR
+  * **Code:** 404 <br />
+  **Content:** `{"message": "User was not found"}`
+    
+* **Sample Call:** <br />
+```json
+curl --location 'http://127.0.0.1:5000/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
     "email": "email@gmail.com",
     "password": "pass"
 }'
